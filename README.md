@@ -14,22 +14,24 @@
 
 ## 系统要求
 
-- Windows 操作系统
-- Python 3.7+
-- 依赖库：`wxPython`、`pandas`、`openpyxl`、`xlsxwriter`、`numpy`
-
-## 安装依赖
-
-```bash
-pip install wxPython pandas openpyxl xlsxwriter numpy
-```
+- Windows 操作系统（Windows 7 及以上版本）
+- 无需安装 Python 或其他依赖库（exe 版本已包含所有必要组件）
 
 ## 使用指南
 
 ### 1. 启动程序
 
+#### 方法一：直接运行（推荐）
+双击 `excel-langpack-diff-tool.exe` 文件即可启动程序
+
+#### 方法二：Python 源码运行
+如果你有 Python 环境，也可以运行源码：
 ```bash
-python newid.py
+# 安装依赖
+pip install wxPython pandas openpyxl xlsxwriter numpy
+
+# 运行程序
+python excel-langpack-diff-tool.py
 ```
 
 ### 2. 加载语言包文件
@@ -122,7 +124,16 @@ python newid.py
 - **多语言同步**：确保不同语言版本的文本ID保持同步
 - **翻译进度跟踪**：识别新增、删除、修改的文本内容
 
+## 文件说明
+
+- `excel-langpack-diff-tool.exe`：主程序文件，双击运行
+- `excel-langpack-diff-tool.py`：Python 源代码文件
+- `README.md`：本说明文档
+
 ## 常见问题
+
+**Q: 双击 exe 文件没有反应？**
+A: 请检查是否被杀毒软件拦截，将程序添加到白名单中。首次运行可能需要几秒钟加载时间。
 
 **Q: 程序提示"未找到 Sheet 的列信息"？**
 A: 请重新加载语言包文件，确保文件路径正确且文件未被其他程序占用。
@@ -139,16 +150,33 @@ A: 支持 .xlsx 和 .xls 格式的 Excel 语言包文件。
 **Q: 如何处理多语言列？**
 A: 可以分别对比不同语言列，如先对比中文列，再对比英文列。
 
+**Q: exe 文件可以在其他电脑上运行吗？**
+A: 可以，exe 文件已包含所有依赖，可以在任何 Windows 系统上直接运行，无需安装 Python。
+
 ## 技术支持
 
 如遇到问题或需要功能改进，请联系开发团队。
 
+## 部署说明
+
+### 绿色版本（推荐）
+- 下载后直接运行 `excel-langpack-diff-tool.exe`，无需安装
+- 可放置在任意目录，支持便携使用
+- 适合团队内部分发和使用
+
+### 源码版本
+- 适合有 Python 环境的开发者
+- 可自定义修改和扩展功能
+- 需要手动安装依赖库
+
 ## 更新日志
 
-- **2025-12-18**：初始版本，支持基础翻译对比功能
-- 支持多线程并行处理，大幅提升大型语言包处理速度
-- 新增完整的翻译差异分析报告
+- **v1.0 (2025-12-18)**：
+  - 初始版本，支持基础翻译对比功能
+  - 支持多线程并行处理，大幅提升大型语言包处理速度
+  - 新增完整的翻译差异分析报告
+  - 提供 exe 绿色版本，无需安装 Python 环境
 
 ---
 
-*版本：2025-12-18 | 专为游戏本地化团队设计*
+*版本：v1.0 | 专为游戏本地化团队设计 | 绿色免安装版本*
